@@ -14,10 +14,10 @@ Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
 
-Route::get('hello/:name', 'index/hello');
+//Route::get('hello/:name', 'index/hello');
 // 注册路由到index模块的News控制器的read操作
-Route::get('index','index/index/index');
-Route::get('hello','index/index/hello');
+//Route::get('index','index/index/index');
+
 //->validate('app\index\validate\index');;
 
 return [

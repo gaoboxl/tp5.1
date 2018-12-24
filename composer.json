@@ -1,6 +1,6 @@
 {
     "name": "lg/xiaoli",
-    "description": "这是小李子的框架",
+    "description": "the new thinkphp framework",
     "type": "project",
     "keywords": [
         "framework",
@@ -11,8 +11,8 @@
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "123456",
-            "email": "123456@gmail.com"
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
         }
     ],
     "require": {

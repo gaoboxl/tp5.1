@@ -18,7 +18,7 @@ class Http extends Handle
         }
 
         // 请求异常
-        if ($e instanceof HttpException && request()->isAjax()) {
+        if ($e instanceof HttpException || request()->isAjax()) {
 			
             return response($e->getMessage(), $e->getStatusCode());
         }
