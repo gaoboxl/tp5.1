@@ -1,12 +1,10 @@
 <?php
 namespace app\index\controller;
 
-use think\facade\Log;
 use think\Controller;
-use pay\PayFactory;
-use app\index\repository\UserRepository;
 use app\common\model\User;
-use encryption\Crypts;
+use app\index\repository\UserRepository;
+use drive\facade\{Crypts,Hash};
 
 class Index extends Controller
 {
@@ -22,8 +20,20 @@ class Index extends Controller
     public function index()
     {
         
-		return PayFactory::name('alipayf')->transfer('100');	
+		//return Pay::name('wxpay')->transfer('100');	
 	
+		//Crypts::encrypt(123456);
+	
+		$str =  Hash::make(123);
+		
+		if(Hash::check(1235,$str)){
+			return 'success';
+		}else{
+			return 'error';
+		}
+		
+	
+		
 	}
 	
 	
@@ -31,12 +41,10 @@ class Index extends Controller
 	public function test()
 	{
 		
-		$crypts =  new  Crypts;
-		$dd =  encrypt(4444);
-		
-		echo $dd;
-		
-		echo decrypt($dd);
+		//$crypts =  new  Crypts;
+		//$dd 	=  encrypt(4444);
+		//echo $dd;
+		//echo decrypt($dd);
 		
 		
 	}

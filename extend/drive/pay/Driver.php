@@ -1,5 +1,5 @@
 <?php
-namespace pay;
+namespace drive\pay;
 
 
 abstract class Driver

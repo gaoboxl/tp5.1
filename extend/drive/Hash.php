@@ -1,5 +1,15 @@
 <?php
-namespace encryption;
+namespace drive;
+
+/**
+ * ====================== 
+ * 说明:加密和验证
+ *
+ * 作者:小李子
+ *
+ * 时间：2018-12-25
+ * ======================
+ */
 
 class Hash
 {
@@ -10,7 +20,7 @@ class Hash
      * @param  string  $value
 	 * @return string  $hash
      */
-    public static function make($value)
+    public function make($value)
     {
         $hash = password_hash($value, PASSWORD_BCRYPT);
 
@@ -30,7 +40,7 @@ class Hash
      * @param  string  $hashedValue
      * @return bool
      */
-    public static function check($value, $hashedValue)
+    public function check($value, $hashedValue)
     {
         if (empty($hashedValue)) {
             return false;
@@ -38,3 +48,5 @@ class Hash
 
         return password_verify($value, $hashedValue);
     }
+	
+}

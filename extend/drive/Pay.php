@@ -1,8 +1,8 @@
 <?php
-namespace pay;
+namespace drive;
 
 
-class PayFactory
+class Pay
 {
 	
 	/**
@@ -16,12 +16,12 @@ class PayFactory
 		switch ($type) {
 			case 'wxpay':
 				
-				return new \pay\driver\Wxpay;
+				return new \drive\pay\driver\Wxpay;
 				break;
 			
 			case 'alipay':
 			
-				return new \pay\driver\Alipay;
+				return new \drive\pay\driver\Alipay;
 				break;
 		}
 

@@ -1,23 +1,23 @@
 <?php
-namespace pay\driver;
+namespace drive\pay\driver;
 
-use pay\Driver;
+use drive\pay\Driver;
 
-class Wxpay extends Driver
+class Alipay extends Driver
 {
 	
 	//支付
 	public function pay($amount)
 	{
 		
-		return "微信支付{$amount}";
+		return "支付宝支付{$amount}";
 	}
 	
 	
 	//订单退款
 	public function refund($amount, $trade_no='')
 	{
-		return "微信退款{$amount}";
+		return "支付宝退款{$amount}";
 		
 	}
 	
@@ -25,7 +25,7 @@ class Wxpay extends Driver
 	//单笔转账
 	public function transfer($amount, $payee_account='', $payee_type='', $out_biz_no='')
 	{
-		return "微信转账{$amount}";
+		return "支付宝转账{$amount}";
 		
 	}
 	
